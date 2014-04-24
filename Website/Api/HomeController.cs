@@ -7,6 +7,7 @@ namespace Website.Api
 {
 	public class HomeController : ApiController
 	{
+		[HttpGet]
 		public HttpContent Index()
 		{
 			var template = "Hello @Model.Name! Welcome to Web API and Razor!";

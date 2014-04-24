@@ -1,6 +1,9 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
 
-namespace Website
+namespace WebApplication1
 {
 	public static class WebApiConfig
 	{
@@ -14,12 +17,8 @@ namespace Website
 			config.Routes.MapHttpRoute(
 				name: "DefaultApi",
 				routeTemplate: "api/{controller}/{id}",
-				defaults: new {id = RouteParameter.Optional}
-				);
-
-			config.Routes.MapHttpRoute(
-				"Default", "{controller}/{action}",
-				new {controller = "Home", action = "Index"});
+				defaults: new { id = RouteParameter.Optional }
+			);
 		}
 	}
 }
